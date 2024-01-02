@@ -18,7 +18,7 @@ const Ourblog = () => {
 
   let blogHendler = () => {
     axios
-      .get("http://localhost:5000/blogall", {
+      .get("https://thankful-yoke-colt.cyclic.app/blogall", {
         headers: { token: localStorage.getItem("userToken") },
       })
       .then((res) => {
@@ -33,7 +33,7 @@ const Ourblog = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/alldata", {
+      .get("https://thankful-yoke-colt.cyclic.app/alldata", {
         headers: { token: localStorage.getItem("adminToken") },
       })
       .then((res) => {
@@ -47,7 +47,7 @@ const Ourblog = () => {
 
   let blogdeleteHendler = (id) => {
     axios
-      .delete(`http://localhost:5000/blogdelete?id=${id}`, {
+      .delete(`https://thankful-yoke-colt.cyclic.app/blogdelete?id=${id}`, {
         headers: { token: localStorage.getItem("userToken") },
       })
       .then((res) => {
@@ -77,7 +77,7 @@ const Ourblog = () => {
 
           if (id) {
             axios
-              .put(`http://localhost:5000/blogupdate?id=${id}`, blogData, {
+              .put(`https://thankful-yoke-colt.cyclic.app/blogupdate?id=${id}`, blogData, {
                 headers: {
                   "Content-Type": "multipart/form-data",
                   token: localStorage.getItem("userToken"),
@@ -91,7 +91,7 @@ const Ourblog = () => {
               });
           } else {
             axios
-              .post("http://localhost:5000/blogadd", blogData, {
+              .post("https://thankful-yoke-colt.cyclic.app/blogadd", blogData, {
                 headers: {
                   "Content-Type": "multipart/form-data",
                   token: localStorage.getItem("userToken"),
@@ -168,7 +168,7 @@ const Ourblog = () => {
               <td>{el.category.name}</td>
               <td>
                 <img
-                  src={"http://localhost:5000/images/" + el.image}
+                  src={"https://thankful-yoke-colt.cyclic.app/images/" + el.image}
                   height={50}
                 />
               </td>

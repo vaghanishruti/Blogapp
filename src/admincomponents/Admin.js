@@ -19,7 +19,7 @@ const Admin = () => {
         }}
         onSubmit={async (values) => {
           axios
-            .post("http://localhost:5000/adminsign", values)
+            .post("https://thankful-yoke-colt.cyclic.app/adminsign", values)
             .then((res) => {
               console.log(res.data.data);
               setAdmindata(res.data.data);

@@ -16,7 +16,7 @@ const Adminlogin = () => {
         }}
         onSubmit={async (values) => {
           axios
-            .post("http://localhost:5000/adminlog", values)
+            .post("https://thankful-yoke-colt.cyclic.app/adminlog", values)
             .then((res) => {
               console.log(res.data.data);
               setAdmindata(res.data.data);

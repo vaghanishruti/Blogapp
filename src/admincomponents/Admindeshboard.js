@@ -7,7 +7,7 @@ const AdminDeshboard = () => {
 
   let userHendler = () => {
     axios
-      .get("http://localhost:5000/alluser")
+      .get("https://thankful-yoke-colt.cyclic.app/alluser")
       .then((res) => {
         console.log(res.data.data);
         setUser(res.data.data);
@@ -19,7 +19,7 @@ const AdminDeshboard = () => {
 
   let userDeleteHendler = (id) => {
     axios
-      .delete(`http://localhost:5000/userdelete?id=${id}`)
+      .delete(`https://thankful-yoke-colt.cyclic.app/userdelete?id=${id}`)
       .then((res) => {
         console.log(res);
         userHendler();
@@ -31,7 +31,7 @@ const AdminDeshboard = () => {
 
   let categoriesHendler = () => {
     axios
-      .get("http://localhost:5000/alldata", {
+      .get("https://thankful-yoke-colt.cyclic.app/alldata", {
         headers: { token: localStorage.getItem("adminToken") },
       })
       .then((res) => {
@@ -45,7 +45,7 @@ const AdminDeshboard = () => {
 
   let categoriesDeleteHendler = (id) => {
     axios
-      .delete(`http://localhost:5000/deletedata?id=${id}`)
+      .delete(`https://thankful-yoke-colt.cyclic.app/deletedata?id=${id}`)
       .then((res) => {
         categoriesHendler();
       })
@@ -95,7 +95,7 @@ const AdminDeshboard = () => {
               <td>{el.name}</td>
               <td>
                 <img
-                  src={"http://localhost:5000/images/" + el.image}
+                  src={"https://thankful-yoke-colt.cyclic.app/images/" + el.image}
                   width={50}
                 />
               </td>

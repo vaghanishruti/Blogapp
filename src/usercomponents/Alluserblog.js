@@ -9,7 +9,7 @@ const Alluserblog = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/alluserblog")
+      .get("https://thankful-yoke-colt.cyclic.app/alluserblog")
       .then((res) => {
         // console.log(res.data.data);
         setAllblog(res.data.data);
@@ -29,7 +29,7 @@ const Alluserblog = () => {
                 <Card style={{ width: "20rem" }}>
                   <Card.Img
                     variant="top"
-                    src={"http://localhost:5000/images/" + el.image}
+                    src={"https://thankful-yoke-colt.cyclic.app/images/" + el.image}
                     height="200px"
                     width="200px"
                   />

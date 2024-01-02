@@ -20,7 +20,7 @@ const Categories = () => {
 
   let categoriesHendler = () => {
     axios
-      .get("http://localhost:5000/alldata", {
+      .get("https://thankful-yoke-colt.cyclic.app/alldata", {
         headers: { token: localStorage.getItem("adminToken") },
       })
       .then((res) => {
@@ -43,7 +43,7 @@ const Categories = () => {
 
   let deleteHendler = (id) => {
     axios
-      .delete(`http://localhost:5000/deletedata?id=${id}`, {
+      .delete(`https://thankful-yoke-colt.cyclic.app/deletedata?id=${id}`, {
         headers: { token: localStorage.getItem("adminToken") },
       })
       .then((res) => {
@@ -67,7 +67,7 @@ const Categories = () => {
           if (id) {
             axios
               .put(
-                `http://localhost:5000/updatedata?id=${id}`,
+                `https://thankful-yoke-colt.cyclic.app/updatedata?id=${id}`,
                 categoriesData,
                 {
                   headers: {
@@ -84,7 +84,7 @@ const Categories = () => {
               });
           } else {
             axios
-              .post("http://localhost:5000/adddata", categoriesData, {
+              .post("https://thankful-yoke-colt.cyclic.app/adddata", categoriesData, {
                 headers: {
                   "Content-Type": "multipart/form-data",
                   token: localStorage.getItem("adminToken"),
@@ -136,7 +136,7 @@ const Categories = () => {
               <td>{el.name}</td>
               <td>
                 <img
-                  src={"http://localhost:5000/images/" + el.image}
+                  src={"https://thankful-yoke-colt.cyclic.app/images/" + el.image}
                   width={50}
                 />
               </td>
@@ -159,7 +159,7 @@ const Categories = () => {
                 <Card style={{ width: "20rem" }}>
                   <Card.Img
                     variant="top"
-                    src={"http://localhost:5000/images/" + el.image}
+                    src={"https://thankful-yoke-colt.cyclic.app/images/" + el.image}
                     height="200px"
                     width="200px"
                   />
