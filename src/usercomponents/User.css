@@ -1,0 +1,49 @@
+.user-back-color{
+    background-color: #486454;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.user-form-data{
+    height: 350px;
+    width: 300px;
+    border: 1px solid #87a994;
+    border-radius: 5px;
+    position: absolute;
+    left: 535px;
+    top: 130px;
+    box-shadow: 0px 5px 10px 10px #2f412f;
+    background-color: #F2E8C6;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    color: black;
+    font-weight: 500;
+}
+.border-bottom{
+    border-bottom: 1px solid #b4bfb7;
+}
+.username,.password{
+    margin: 10px 20px 0px 20px !important;
+    color: black;
+
+}
+.user-field,.password-field{
+    margin:  0px 20px;
+    padding: 8px 35px;
+    outline: none;
+}
+.submit-btn-user{
+    margin-top: 20px;
+    position: absolute;
+    left: 20px;
+    padding: 7px 100px;
+}
+.submit-btn-user:hover{
+    background-color: #486454 !important;
+    color: white;
+    outline: none;
+    border: none;
+}
